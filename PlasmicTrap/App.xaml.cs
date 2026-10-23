@@ -19,7 +19,7 @@ namespace PlasmicTrap
         public const string ProjectName = "PlasmicTrap";
 #endif
         public const string ProjectOwner = "Plasma";
-        public const string ProjectRepository = "YOUR_GITHUB_USERNAME/PlasmicTrap";
+        public const string ProjectRepository = "plasma-ven/PlasmicTrap";
         public const string ProjectDownloadLink = $"https://github.com/{ProjectRepository}/releases/latest";
         public const string ProjectHelpLink = "https://bloxstraplabs.com/wiki/help/";
         public const string ProjectSupportLink = $"https://github.com/{ProjectRepository}/issues/new";

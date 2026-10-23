@@ -11,15 +11,15 @@ PlasmicTrap is a fork of [Bloxstrap](https://github.com/bloxstraplabs/bloxstrap)
 
 Everything else (FastFlags, mods, custom bootstrapper themes, Discord Rich Presence, activity tracking) is inherited from Bloxstrap. `BloxstrapRPC` and `BloxstrapCustomBootstrapper` keep their names so existing games and themes keep working.
 
-## Setup before you publish
+## Forking this
 
-Set your GitHub repository in `PlasmicTrap/App.xaml.cs`:
+The update repository is set in `PlasmicTrap/App.xaml.cs`:
 
 ```csharp
-public const string ProjectRepository = "YOUR_GITHUB_USERNAME/PlasmicTrap";
+public const string ProjectRepository = "plasma-ven/PlasmicTrap";
 ```
 
-Until you change it, the updater does nothing. A few links in the About, Welcome, and install pages use the same `YOUR_GITHUB_USERNAME/PlasmicTrap` placeholder, so search for it and replace all occurrences.
+If you fork this again, change that constant and the same repo path in `AboutPage.xaml` and `WelcomePage.xaml`. If the constant is ever set to a value starting with `YOUR_`, the updater is disabled.
 
 ## Building
 
