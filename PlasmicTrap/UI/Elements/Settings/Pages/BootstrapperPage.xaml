@@ -24,6 +24,12 @@
         </controls:OptionControl>
 
         <controls:OptionControl 
+            Header="Multi-instance launching"
+            Description="Lets you run several Roblox clients at once, for example to use multiple accounts. Launch every client through PlasmicTrap, and start the first one after turning this on.">
+            <ui:ToggleSwitch IsChecked="{Binding AllowMultipleInstances, Mode=TwoWay}" />
+        </controls:OptionControl>
+
+        <controls:OptionControl 
             Header="{x:Static resources:Strings.Menu_Behaviour_BackgroundUpdates_Title}"
             Description="{x:Static resources:Strings.Menu_Behaviour_BackgroundUpdates_Description}">
             <ui:ToggleSwitch IsChecked="{Binding BackgroundUpdates, Mode=TwoWay}" />

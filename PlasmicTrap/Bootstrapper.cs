@@ -604,6 +604,9 @@ namespace PlasmicTrap
                 logCreatedEvent.Set();
             };
 
+            if (App.Settings.Prop.AllowMultipleInstances && _launchMode == LaunchMode.Player)
+                RobloxSingleton.Hold();
+
             // v2.2.0 - byfron will trip if we keep a process handle open for over a minute, so we're doing this now
             try
             {
@@ -673,7 +676,7 @@ namespace PlasmicTrap
                     autoclosePids.Add(pid);
             }
 
-            if (App.Settings.Prop.EnableActivityTracking || App.LaunchSettings.TestModeFlag.Active || autoclosePids.Any())
+            if (App.Settings.Prop.EnableActivityTracking || App.Settings.Prop.AllowMultipleInstances || App.LaunchSettings.TestModeFlag.Active || autoclosePids.Any())
             {
                 using var ipl = new InterProcessLock("Watcher", TimeSpan.FromSeconds(5));
 

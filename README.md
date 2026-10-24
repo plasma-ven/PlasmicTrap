@@ -7,6 +7,7 @@ PlasmicTrap is a fork of [Bloxstrap](https://github.com/bloxstraplabs/bloxstrap)
 - Rebranded: own name, icon, install folder (`%LocalAppData%\PlasmicTrap`), uninstall entry, and process mutexes.
 - Updates come from this repository's GitHub releases, never from Bloxstrap's.
 - No telemetry. Analytics and crash-log upload to Bloxstrap's servers are removed, and the analytics settings are gone.
+- Multi-instance launching: a Behaviour toggle that holds Roblox's singleton mutex so several clients can run at once. Launch every client through PlasmicTrap, and start the first one after enabling it.
 - Clear cache: a button in the settings page that wipes Roblox's package download cache, asset cache, and PlasmicTrap's own download cache. It refuses to run while Roblox is open.
 
 Everything else (FastFlags, mods, custom bootstrapper themes, Discord Rich Presence, activity tracking) is inherited from Bloxstrap. `BloxstrapRPC` and `BloxstrapCustomBootstrapper` keep their names so existing games and themes keep working.

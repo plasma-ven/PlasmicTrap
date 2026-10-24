@@ -8,6 +8,12 @@
             set => App.Settings.Prop.ConfirmLaunches = value;
         }
 
+        public bool AllowMultipleInstances
+        {
+            get => App.Settings.Prop.AllowMultipleInstances;
+            set => App.Settings.Prop.AllowMultipleInstances = value;
+        }
+
         public bool BackgroundUpdates
         {
             get => App.Settings.Prop.BackgroundUpdatesEnabled;

@@ -50,6 +50,9 @@ namespace PlasmicTrap
             if (_watcherData is null)
                 throw new Exception("Watcher data is invalid");
 
+            if (App.Settings.Prop.AllowMultipleInstances)
+                RobloxSingleton.Hold();
+
             if (App.Settings.Prop.EnableActivityTracking)
             {
                 ActivityWatcher = new(_watcherData.LogFile);
