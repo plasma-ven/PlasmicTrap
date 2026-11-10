@@ -6,6 +6,7 @@
         Default,
         Light,
         Dark,
+        [EnumName(StaticName = "Classic")]
         Classic
     }
 }
