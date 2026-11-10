@@ -5,6 +5,7 @@
         [EnumName(FromTranslation = "Common.SystemDefault")]
         Default,
         Light,
-        Dark
+        Dark,
+        Classic
     }
 }

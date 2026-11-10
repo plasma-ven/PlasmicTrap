@@ -4,8 +4,13 @@ namespace PlasmicTrap.Extensions
 {
     public static class ThemeEx
     {
+        public static bool IsClassic(this Theme theme) => theme == Theme.Classic;
+
         public static Theme GetFinal(this Theme dialogTheme)
         {
+            if (dialogTheme == Theme.Classic)
+                return Theme.Light;
+
             if (dialogTheme != Theme.Default)
                 return dialogTheme;
 

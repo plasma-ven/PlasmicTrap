@@ -27,6 +27,8 @@ namespace PlasmicTrap.UI.Elements.Settings
             
             InitializeComponent();
 
+            ApplyTheme();
+
             App.Logger.WriteLine("MainWindow", "Initializing settings window");
 
             if (showAlreadyRunningWarning)

@@ -11,6 +11,8 @@ namespace PlasmicTrap.UI.Elements.Base
     {
         private readonly IThemeService _themeService = new ThemeService();
 
+        private BackgroundType? _backdropBeforeClassic;
+
         public WpfUiWindow()
         {
             ApplyTheme();
@@ -21,7 +23,29 @@ namespace PlasmicTrap.UI.Elements.Base
             const int customThemeIndex = 2; // index for CustomTheme merged dictionary
 
             _themeService.SetTheme(App.Settings.Prop.Theme.GetFinal() == Enums.Theme.Dark ? ThemeType.Dark : ThemeType.Light);
-            _themeService.SetSystemAccent();
+
+            bool classic = App.Settings.Prop.Theme.IsClassic();
+
+            if (classic)
+            {
+                ClassicTheme.Apply();
+            }
+            else
+            {
+                ClassicTheme.Clear();
+                _themeService.SetSystemAccent();
+            }
+
+            if (classic && WindowBackdropType != BackgroundType.None)
+            {
+                _backdropBeforeClassic = WindowBackdropType;
+                WindowBackdropType = BackgroundType.None;
+            }
+            else if (!classic && _backdropBeforeClassic is not null)
+            {
+                WindowBackdropType = _backdropBeforeClassic.Value;
+                _backdropBeforeClassic = null;
+            }
 
             // there doesn't seem to be a way to query the name for merged dictionaries
             var dict = new ResourceDictionary { Source = new Uri($"pack://application:,,,/UI/Style/{Enum.GetName(App.Settings.Prop.Theme.GetFinal())}.xaml") };
