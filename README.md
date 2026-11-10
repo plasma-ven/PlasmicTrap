@@ -8,6 +8,8 @@ PlasmicTrap is a fork of [Bloxstrap](https://github.com/bloxstraplabs/bloxstrap)
 - Updates come from this repository's GitHub releases, never from Bloxstrap's.
 - No telemetry. Analytics and crash-log upload to Bloxstrap's servers are removed, and the analytics settings are gone.
 - Multi-instance launching: a Behaviour toggle that holds Roblox's singleton mutex so several clients can run at once. Launch every client through PlasmicTrap, and start the first one after enabling it.
+- Classic theme: a Classic option in Settings → Appearance → Theme. It uses the light base with the classic Roblox blue accent and a flat grey background, with no Mica.
+- Classic website style: `Extras/classic-roblox-site.user.css` is a separate userstyle for roblox.com (install it with the Stylus browser extension). The launcher can't restyle the website, and the selectors are best-effort because Roblox changes its CSS often.
 - Clear cache: a button in the settings page that wipes Roblox's package download cache, asset cache, and PlasmicTrap's own download cache. It refuses to run while Roblox is open.
 
 Everything else (FastFlags, mods, custom bootstrapper themes, Discord Rich Presence, activity tracking) is inherited from Bloxstrap. `BloxstrapRPC` and `BloxstrapCustomBootstrapper` keep their names so existing games and themes keep working.

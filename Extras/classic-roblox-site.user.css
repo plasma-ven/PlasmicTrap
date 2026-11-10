@@ -1,0 +1,110 @@
+/* ==UserStyle==
+@name         PlasmicTrap Classic (Roblox website)
+@namespace    https://github.com/plasma-ven/PlasmicTrap
+@version      1.0.0
+@description  Flat grey background, classic Roblox blue and green buttons, square corners on roblox.com
+@author       Plasma
+@license      MIT
+==/UserStyle== */
+
+@-moz-document domain("roblox.com") {
+    :root {
+        --classic-blue: #00a2ff;
+        --classic-blue-dark: #0074bd;
+        --classic-green: #02b757;
+        --classic-green-dark: #029f4b;
+        --classic-bg: #e3e3e3;
+        --classic-border: #c3c3c3;
+    }
+
+    body,
+    body.light-theme,
+    body.dark-theme {
+        background-color: var(--classic-bg) !important;
+        font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    }
+
+    .container-main,
+    .content {
+        background-color: #ffffff !important;
+        border: 1px solid var(--classic-border) !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .rbx-header,
+    #header,
+    .navbar-fixed-top {
+        background-color: #ffffff !important;
+        border-bottom: 1px solid var(--classic-border) !important;
+        box-shadow: none !important;
+    }
+
+    .rbx-left-col,
+    #navigation {
+        background-color: var(--classic-bg) !important;
+        border-right: 1px solid var(--classic-border) !important;
+    }
+
+    a,
+    a:hover,
+    .text-link {
+        color: var(--classic-blue-dark) !important;
+    }
+
+    .btn-primary-md,
+    .btn-primary-lg,
+    .btn-primary-sm,
+    .btn-secondary-md,
+    .btn-secondary-lg,
+    .btn-secondary-sm {
+        background-color: var(--classic-blue) !important;
+        border: 1px solid var(--classic-blue-dark) !important;
+        border-radius: 3px !important;
+        color: #ffffff !important;
+        box-shadow: none !important;
+    }
+
+    .btn-primary-md:hover,
+    .btn-primary-lg:hover,
+    .btn-primary-sm:hover,
+    .btn-secondary-md:hover,
+    .btn-secondary-lg:hover,
+    .btn-secondary-sm:hover {
+        background-color: var(--classic-blue-dark) !important;
+    }
+
+    .btn-cta-md,
+    .btn-cta-lg,
+    .btn-cta-sm,
+    .btn-growth-md,
+    .btn-growth-lg,
+    .btn-growth-sm,
+    .btn-common-play-game-lg {
+        background-color: var(--classic-green) !important;
+        border: 1px solid var(--classic-green-dark) !important;
+        border-radius: 3px !important;
+        color: #ffffff !important;
+        box-shadow: none !important;
+    }
+
+    .btn-cta-md:hover,
+    .btn-cta-lg:hover,
+    .btn-cta-sm:hover,
+    .btn-growth-md:hover,
+    .btn-growth-lg:hover,
+    .btn-growth-sm:hover,
+    .btn-common-play-game-lg:hover {
+        background-color: var(--classic-green-dark) !important;
+    }
+
+    .game-card-container,
+    .thumbnail-2d-container,
+    .card,
+    .section-content,
+    input,
+    select,
+    textarea {
+        border-radius: 0 !important;
+    }
+}
